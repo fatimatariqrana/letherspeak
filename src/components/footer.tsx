@@ -2,7 +2,6 @@ import { cn } from "~/lib/utils";
 import Link from "next/link";
 import { ComponentProps, PropsWithChildren } from "react";
 import { Badge } from "~/components/ui/badge";
-import { Lock } from "lucide-react";
 
 const Section = {
   Root: (props: PropsWithChildren) => <div className="space-y-1" {...props} />,
@@ -35,8 +34,8 @@ export const Footer = () => {
             <div className="space-y-1">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <Lock className="h-6 w-6" />
-                  <h2 className="text-2xl font-bold">Anonumu</h2>
+                
+                  <h2 className="text-2xl font-bold">Let Her Speak</h2>
                 </div>
 
                 <div>
@@ -48,7 +47,6 @@ export const Footer = () => {
               </div>
 
               <p className="text-sm text-muted-foreground">
-                Created with {`<3`} by Kushi, and special thanks to Srinka 
               </p>
             </div>
 
@@ -62,24 +60,23 @@ export const Footer = () => {
 
           <div className="col-span-2 grid grid-cols-3 gap-4">
             <Section.Root>
-              <Section.Label>To Report</Section.Label>
+              <Section.Label></Section.Label>
 
               <Section.List>
                 <Section.Item>
-                  <Link href="https://instagram.com/nanduu.1117">
-                    DM on Instagram
+                  <Link href="">
                   </Link>
                 </Section.Item>
               </Section.List>
             </Section.Root>
 
             <Section.Root>
-              <Section.Label>Developers</Section.Label>
+              <Section.Label></Section.Label>
 
               <Section.List>
                 <Section.Item>
-                  <Link href="https://github.com/avalynndev/anonypost">
-                    Github
+                  <Link href="">
+                    
                   </Link>
                 </Section.Item>
               </Section.List>

@@ -52,9 +52,24 @@ export const Navbar = () => {
           </AnnuTrigger>
           <AnnuContent>
             <AnnuHeader>
-              <AnnuTitle>Anonymous Post</AnnuTitle>
+              <AnnuTitle>    🌼 A Safe Space for Your Story </AnnuTitle>
               <AnnuDescription>
-                Type out a new post and make sure to keep it a secret 🔐
+          
+              Some things are too heavy to carry alone. You don’t have to. Whether it’s pain, joy, or everything in between, put it into words. 
+
+<br></br>💡 Need a starting point? <br></br>
+
+"I’ve never told anyone this, but..." <br></br>
+
+"If I could go back in time, I would tell myself..."<br></br>
+
+"The hardest thing I’ve ever had to do was..."<br></br>
+
+"The world sees me as ____, but inside I feel ____."<br></br>
+
+🔒 You are safe here. No names, no pressure—just truth.<br></br>
+
+🗣️ Let Her Speak. Because stories have power.
               </AnnuDescription>
             </AnnuHeader>
             <AnnuBody className="space-y-4 pb-4 text-center text-sm sm:pb-0 sm:text-left">
@@ -63,10 +78,10 @@ export const Navbar = () => {
                   e.preventDefault();
                   createPost.mutate({ name });
                 }}
-                className="flex flex-col gap-2"
+                className="flex flex-col gap-4"
               >
                 <Textarea
-                  placeholder="i eat broccoli"
+                  placeholder="Write your story here"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full rounded-md px-4 py-2"
@@ -78,26 +93,14 @@ export const Navbar = () => {
             </AnnuBody>
             <AnnuFooter>
               <span className="text-sm text-muted-foreground">
-                Crafted with ❤️
+                Let Her Speak ❤️
               </span>
             </AnnuFooter>
           </AnnuContent>
         </Annu>
       </div>
 
-      <div className="flex">
-        <ToggleTheme />
 
-        <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
-          <Link
-            aria-label="View on GitHub"
-            href="https://github.com/avalynndev/anonypost"
-            target="_blank"
-          >
-            <Github className="size-5" />
-          </Link>
-        </Button>
-      </div>
     </header>
   );
 };

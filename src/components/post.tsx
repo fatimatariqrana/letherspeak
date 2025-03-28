@@ -16,6 +16,7 @@ import {
   HeartIcon,
   CornerBottomLeftIcon,
   PaperPlaneIcon,
+  ColorWheelIcon,
 } from "@radix-ui/react-icons";
 import { Badge } from "./ui/badge";
 import { Button } from "~/components/ui/button";
@@ -62,8 +63,8 @@ export default function Post() {
           type="search"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search posts..."
-          className="mb-4 w-full rounded-md text-sm"
+          placeholder=" 🔎 Search posts..."
+          className="mb-4 w-full rounded-md text-sm text-white"
         />
         {searchTerm
            ? filteredPosts.map((post) => (
@@ -106,7 +107,7 @@ export default function Post() {
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs italic text-gray-500">
+                    <div className="text-xs italic text-white">
                       No replies yet.
                     </div>
                   )}
@@ -132,7 +133,7 @@ export default function Post() {
                             variant="outline"
                             size="icon"
                           >
-                            <CrossCircledIcon className="h-4 w-4 text-gray-500" />
+                            <CrossCircledIcon className="h-4 w-4 text-white" />
                           </Button>
                         </div>
                       </div>
@@ -223,11 +224,13 @@ export default function Post() {
                         {index === 0 && (
                           <CornerBottomLeftIcon className="mr-1 inline h-4 w-4" />
                         )}
-                        {reply}
+                        
+
+                        🗨️ {reply}
                       </div>
                     ))
                   ) : (
-                    <div className="text-xs italic text-gray-500">
+                    <div className="text-xs italic text-white">
                       No replies yet.
                     </div>
                   )}
@@ -253,7 +256,7 @@ export default function Post() {
                             variant="outline"
                             size="icon"
                           >
-                            <CrossCircledIcon className="h-4 w-4 text-gray-500" />
+                            <CrossCircledIcon className="h-4 w-4 " />
                           </Button>
                         </div>
                       </div>

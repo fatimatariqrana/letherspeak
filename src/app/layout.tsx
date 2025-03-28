@@ -8,7 +8,7 @@ import { Navbar } from "~/components/navbar";
 import { Footer } from "~/components/footer";
 
 export const metadata: Metadata = {
-  title: "Anonymous Posts",
+  title: "Let Her Speak",
   description:
     "Share your thoughts and experiences anonymously by posting on our platform — no sign-up needed!",
 };
