@@ -21,29 +21,41 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <div className="relative flex w-full flex-col items-center justify-center">
-        <span className="pointer-events-none mt-6 text-white whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text py-6 text-center text-5xl font-semibold leading-none dark:from-white dark:to-slate-900/10">
-          Let Her Speak
-        </span>
-        <div className="mt-6 max-w-xl text-left text-md text-white">
+<div className="relative flex w-full flex-col items-center justify-center px-4 sm:px-6">
+      
+      {/* Title with Responsive Gradient Text */}
+      <span className="pointer-events-none mt-6 text-transparent bg-gradient-to-r from-white via-pink-200 to-purple-300 bg-clip-text py-6 text-center text-[clamp(2rem,5vw,4rem)] font-semibold leading-none">
+        Let Her Speak
+      </span>
+
+      {/* Subtitle - Responsive & Max Width */}
+      <div className="mt-6 max-w-xl text-center text-md text-white">
         When One Woman Speaks, a Thousand Find Their Voice.
-        </div>
+      </div>
 
-        <div className="mt-6 max-w-xl text-left text-md text-white">
-        <p className="mt-2"> You are not alone in your story. Others have walked this road, felt this pain, fought this battle. 
+      {/* Description Section */}
+      <div className="mt-6 max-w-2xl text-left text-md text-white leading-relaxed px-4 sm:px-6">
+        <p>
+          You are not alone in your story. Others have walked this road, felt this pain, fought this battle. 
           And here, you will find them. This is a space for truth, for courage, for women who have held 
-          their stories in silence for too long.</p>
-          <br></br>
-          <p><strong>💬 Share your truth:</strong> Stories of resilience, injustice, gender bias, triumphs, or daily struggles. 
-          Anonymously, without judgment.</p>
-          <br></br>
-          <p className="mt-2"><strong>👂 Find support:</strong> A community that listens, understands, and stands with you. Your words will be felt, 
-          your voice will inspire.</p>
+          their stories in silence for too long.
+        </p>
+
+        <br />
+        
+        <p><strong>💬 Share your truth:</strong> Stories of resilience, injustice, gender bias, triumphs, or daily struggles. 
+          Anonymously, without judgment.
+        </p>
+
+        <br />
+        
+        <p><strong>👂 Find support:</strong> A community that listens, understands, and stands with you. Your words will be felt, 
+          your voice will inspire.
+        </p>
       </div>
 
-
-        <Post />
-      </div>
+      <Post />
+    </div>
     </HydrateClient>
   );
 }

@@ -191,7 +191,7 @@ export default function Post() {
           : posts.map((post) => (
               <div
                 key={post.id}
-                className="w-full rounded-xl border p-10 md:px-10 md:py-8"
+                className="w-full rounded-xl border p-10 md:px-10 md:py-8  backdrop-blur-md border-l-4 border-r-4 border-white-400"
               >
                 <div className="mb-2 flex items-center whitespace-pre-line">
                   <div className="flex items-center">

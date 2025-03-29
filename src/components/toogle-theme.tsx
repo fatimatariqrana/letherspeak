@@ -6,7 +6,7 @@ export const ToggleTheme = () => {
   const { theme, setTheme } = useTheme();
   return (
     <Button
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      onClick={() => setTheme(theme === "light" ? "light" : "light")}
       size="sm"
       variant="ghost"
       className="w-full justify-start"
