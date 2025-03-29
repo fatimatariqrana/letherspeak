@@ -1,6 +1,6 @@
 import { cn } from "~/lib/utils";
 import Link from "next/link";
-import { ComponentProps, PropsWithChildren } from "react";
+import { type ComponentProps, type PropsWithChildren } from "react";
 import { Badge } from "~/components/ui/badge";
 
 const Section = {

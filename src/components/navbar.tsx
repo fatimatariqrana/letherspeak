@@ -59,13 +59,13 @@ export const Navbar = () => {
 
 <br></br>💡 Need a starting point? <br></br>
 
-"I’ve never told anyone this, but..." <br></br>
+{`I’ve never told anyone this, but...`}<br></br>
 
-"If I could go back in time, I would tell myself..."<br></br>
+{`If I could go back in time, I would tell myself...`}<br></br>
 
-"The hardest thing I’ve ever had to do was..."<br></br>
+{`The hardest thing I’ve ever had to do was...`}<br></br>
 
-"The world sees me as ____, but inside I feel ____."<br></br>
+{`The world sees me as ____, but inside I feel ____.`}<br></br>
 
 🔒 You are safe here. No names, no pressure—just truth.<br></br>
 
