@@ -12,13 +12,11 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 import { Textarea } from "~/components/ui/textarea";
-
 import { api } from "~/trpc/react";
-import { Github, SquarePlus } from "lucide-react";
+import { SquarePlus } from "lucide-react";
 import React from "react";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import { ToggleTheme } from "~/components/toogle-theme";
 
 export const Navbar = () => {
   const utils = api.useUtils();
@@ -28,48 +26,42 @@ export const Navbar = () => {
     onSuccess: async () => {
       await utils.post.invalidate();
       setName("");
-      // Close the Annu create form
       setAnnuOpen(false);
     },
   });
   return (
-    <header className="sticky top-5 z-40 mx-auto flex w-[90%] items-center justify-between rounded-2xl border border-secondary bg-card bg-opacity-15 p-2 shadow-inner md:w-[70%] lg:w-[75%] lg:max-w-screen-xl">
-      <div className="flex items-center">
-        <Link
-          href="/"
-          className="flex items-center space-y-1 px-4 py-2 text-lg font-bold"
-        >
-          <div className="relative size-6">
-            <Image fill src="/logo.png" alt="gemini logo" />
+    <header className="sticky top-5 z-40 mx-auto flex w-[90%] max-w-full flex-wrap items-center justify-between rounded-2xl border border-secondary bg-card bg-opacity-15 p-2 shadow-inner sm:flex-nowrap md:w-[80%] lg:w-[75%] lg:max-w-screen-xl">
+      <div className="flex items-center space-x-4">
+        <Link href="/" className="flex items-center px-4 py-2 text-lg font-bold">
+          <div className="relative h-8 w-8 sm:h-10 sm:w-10">
+            <Image fill src="/logo.png" alt="gemini logo" className="object-contain" />
           </div>
         </Link>
         <Annu open={annuOpen} onOpenChange={setAnnuOpen}>
           <AnnuTrigger asChild>
-            <Button size="sm" variant="ghost">
+            <Button size="sm" variant="ghost" className="flex items-center px-2">
               <SquarePlus className="h-4 w-4" />
-              <div className="px-2 text-sm">New Post</div>
+              <span className="hidden sm:inline px-2 text-sm">New Post</span>
             </Button>
           </AnnuTrigger>
           <AnnuContent>
             <AnnuHeader>
-              <AnnuTitle>    🌼 A Safe Space for Your Story </AnnuTitle>
+              <AnnuTitle>🌼 A Safe Space for Your Story</AnnuTitle>
               <AnnuDescription>
-          
-              Some things are too heavy to carry alone. You don’t have to. Whether it’s pain, joy, or everything in between, put it into words. 
-
-<br></br>💡 Need a starting point? <br></br>
-
-{`I’ve never told anyone this, but...`}<br></br>
-
-{`If I could go back in time, I would tell myself...`}<br></br>
-
-{`The hardest thing I’ve ever had to do was...`}<br></br>
-
-{`The world sees me as ____, but inside I feel ____.`}<br></br>
-
-🔒 You are safe here. No names, no pressure—just truth.<br></br>
-
-🗣️ Let Her Speak. Because stories have power.
+                Some things are too heavy to carry alone. You don’t have to.
+                Whether it’s pain, joy, or everything in between, put it into
+                words.
+                <br />💡 Need a starting point?
+                <br />
+                {`I’ve never told anyone this, but...`}
+                <br />
+                {`If I could go back in time, I would tell myself...`}
+                <br />
+                {`The hardest thing I’ve ever had to do was...`}
+                <br />
+                {`The world sees me as ____, but inside I feel ____.`}
+                <br />🔒 You are safe here. No names, no pressure—just truth.
+                <br />🗣️ Let Her Speak. Because stories have power.
               </AnnuDescription>
             </AnnuHeader>
             <AnnuBody className="space-y-4 pb-4 text-center text-sm sm:pb-0 sm:text-left">
@@ -92,18 +84,10 @@ export const Navbar = () => {
               </form>
             </AnnuBody>
             <AnnuFooter>
-              <span className="text-sm text-muted-foreground">
-                Let Her Speak ❤️
-              </span>
+              <span className="text-sm text-muted-foreground">Let Her Speak ❤️</span>
             </AnnuFooter>
           </AnnuContent>
         </Annu>
-      </div>
-
-      <div className="flex">
-        
-
-      
       </div>
     </header>
   );
